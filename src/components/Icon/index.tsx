@@ -1,8 +1,7 @@
-import React, { ReactNode } from "react";
+import React from "react";
 import styled from "styled-components";
 
 interface IconProps {
-  children?: ReactNode;
   top?: number;
   right?: number;
   left?: number;
@@ -28,7 +27,9 @@ const Icon: React.FC<IconProps> = ({
       onMouseDown={onMouseDown}
       onMouseUp={onMouseUp}
     >
-      <IconImage>{children}</IconImage>
+      <IconImage>
+        {children}
+      </IconImage>
     </IconBackground>
   );
 };
